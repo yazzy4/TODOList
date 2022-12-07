@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 
     var items: [Item] = [Item(title: "First item", isCompleted: false),
                          Item(title: "Second item", isCompleted: false),
-                         Item(title: "Third item", isCompleted: false),
+                         Item(title: "Third item", isCompleted: true),
                          Item(title: "Fourth item", isCompleted: false)]
     
     // MARK: - Lifecycle
@@ -34,17 +34,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func addBarButtonItemPressed(_ sender: UIBarButtonItem) {
-        
         let viewController = AddItemViewController()
         
         present(viewController, animated: true)
     }
     
-    func completeCheck() {
-        
-    }
-    
-
 }
 
 // MARK: - Datasource, delegate
@@ -64,6 +58,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("DEBUG: deleted...")
+            
+            self.items.remove(at: indexPath.row)
+            self.tableview.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    
     
     
 }
