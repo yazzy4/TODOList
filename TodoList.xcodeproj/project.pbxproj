@@ -14,6 +14,8 @@
 		918B9661293FD8C50057C102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918B9660293FD8C50057C102 /* Assets.xcassets */; };
 		918B9664293FD8C50057C102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918B9662293FD8C50057C102 /* LaunchScreen.storyboard */; };
 		91A14EAA293FE07C0082B5F1 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A14EA9293FE07C0082B5F1 /* ListCell.swift */; };
+		91A14EAC2940F7460082B5F1 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A14EAB2940F7460082B5F1 /* AddItemViewController.swift */; };
+		91A14EB129410ED60082B5F1 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A14EB029410ED60082B5F1 /* ItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		918B9663293FD8C50057C102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		918B9665293FD8C50057C102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A14EA9293FE07C0082B5F1 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		91A14EAB2940F7460082B5F1 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		91A14EB029410ED60082B5F1 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,50 @@
 		918B9656293FD8C00057C102 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
-				918B9657293FD8C00057C102 /* AppDelegate.swift */,
-				918B9659293FD8C00057C102 /* SceneDelegate.swift */,
-				918B965B293FD8C00057C102 /* ViewController.swift */,
-				91A14EA9293FE07C0082B5F1 /* ListCell.swift */,
-				918B965D293FD8C00057C102 /* Main.storyboard */,
-				918B9660293FD8C50057C102 /* Assets.xcassets */,
-				918B9662293FD8C50057C102 /* LaunchScreen.storyboard */,
+				91A14EB229410F130082B5F1 /* Models */,
+				91A14EAD29410E470082B5F1 /* View Controllers */,
+				91A14EAF29410E940082B5F1 /* Views */,
+				91A14EAE29410E6F0082B5F1 /* App */,
 				918B9665293FD8C50057C102 /* Info.plist */,
 			);
 			path = TodoList;
+			sourceTree = "<group>";
+		};
+		91A14EAD29410E470082B5F1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				91A14EAB2940F7460082B5F1 /* AddItemViewController.swift */,
+				918B965B293FD8C00057C102 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		91A14EAE29410E6F0082B5F1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				918B965D293FD8C00057C102 /* Main.storyboard */,
+				918B9657293FD8C00057C102 /* AppDelegate.swift */,
+				918B9659293FD8C00057C102 /* SceneDelegate.swift */,
+				918B9660293FD8C50057C102 /* Assets.xcassets */,
+				918B9662293FD8C50057C102 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		91A14EAF29410E940082B5F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				91A14EA9293FE07C0082B5F1 /* ListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		91A14EB229410F130082B5F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91A14EB029410ED60082B5F1 /* ItemModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A14EB129410ED60082B5F1 /* ItemModel.swift in Sources */,
+				91A14EAC2940F7460082B5F1 /* AddItemViewController.swift in Sources */,
 				918B965C293FD8C00057C102 /* ViewController.swift in Sources */,
 				91A14EAA293FE07C0082B5F1 /* ListCell.swift in Sources */,
 				918B9658293FD8C00057C102 /* AppDelegate.swift in Sources */,

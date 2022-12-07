@@ -8,5 +8,9 @@
 import UIKit
 
 class ListCell: UITableViewCell {
+    // MARK: - Properties
+    
+    @IBOutlet weak var checkImage: UIImageView!
+    @IBOutlet weak var todoItem: UILabel!
     
 }
